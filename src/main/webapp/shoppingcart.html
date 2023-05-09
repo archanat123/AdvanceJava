@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+<form name="shoppingform" action="/adjava/OrderServlet" method="post">
+    	<table>
+			<tbody>
+			<tr>
+
+					 <div >
+                      <h6 class="text-muted">Shirt</h6>
+                      <h6 name="ProductName">Cotton T-shirt</h6>
+                    </div>
+                    <div >
+                      <button class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        <i class="fas fa-minus"></i>
+                      </button>
+
+                      <input id="form1" min="0" name="quantity" value="1" type="number"/>
+
+                      <button class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>   
+      		          
+      		           <div >
+                      <h6 name="PRICE">$ 44.00</h6>
+                    </div> 
+                    </tr>
+                    
+                    <tr align="center">
+					<td colspan="2"><br><br><input type=submit value="purchase"></td>
+				</tr>
+			</tbody>
+		</table>
+</form>
+
+</body>
+</html>
