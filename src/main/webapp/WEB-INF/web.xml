@@ -21,10 +21,25 @@
   <url-pattern>/WebXmlServlet</url-pattern>
   </servlet-mapping>
   
+<filter>
+<filter-name>PhoneNumberFilter</filter-name>
+<filter-class>filters.PhoneNumberFilter</filter-class>
+</filter>
+
+<filter-mapping>
+<filter-name>PhoneNumberFilter</filter-name>
+<url-pattern>/PostServlet</url-pattern>
+</filter-mapping>
   
- 
   
-  
-  
+  <filter>
+<filter-name>UserNameFilter</filter-name>
+<filter-class>filters.UserNameFilter</filter-class>
+</filter>
+
+<filter-mapping>
+<filter-name>UserNameFilter</filter-name>
+<url-pattern>/PostServlet</url-pattern>
+</filter-mapping>
   
 </web-app>

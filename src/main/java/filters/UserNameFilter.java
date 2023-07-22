@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpFilter;
 
-@WebFilter("/UserNameFilter")
+//@WebFilter("/UserNameFilter")
 public class UserNameFilter extends HttpFilter implements Filter {
        
   
@@ -25,12 +25,14 @@ public class UserNameFilter extends HttpFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		System.out.println("entered UserNameFilter");
-		if(request.getParameter("fullName").isEmpty()) {
+		
+		if(request.getParameter("fullName").isEmpty())
+		{
 				response.getWriter().append("user name is empty || not proceeding");
 		return;
 		}
 		
-		chain.doFilter(request, response);
+		chain.doFilter(request,response);
 		System.out.println("exited UserNameFilter");
 		
 	}
